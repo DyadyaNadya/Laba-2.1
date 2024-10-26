@@ -1,4 +1,3 @@
-
 public class Basketball
 {
     protected int points;
@@ -12,7 +11,7 @@ public class Basketball
         set { 
             if (value < 0)
             {
-                throw new ArgumentException("Êîëè÷åñòâî î÷êîâ äîëæíî áûòü íåîòðèöàòåëüíûì öåëûì ÷èñëîì");
+                throw new ArgumentException("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾Ñ‡ÐºÐ¾Ð² Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ñ†ÐµÐ»Ñ‹Ð¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼");
             }
             points = value; 
         }
@@ -24,7 +23,7 @@ public class Basketball
         set {
             if (value < 0)
             {
-                throw new ArgumentException("Êîëè÷åñòâî ïîäáîðîâ äîëæíî áûòü íåîòðèöàòåëüíûì öåëûì ÷èñëîì");
+                throw new ArgumentException("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð´Ð±Ð¾Ñ€Ð¾Ð² Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ñ†ÐµÐ»Ñ‹Ð¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼");
             }
             rebounds = value;
         }
@@ -37,13 +36,13 @@ public class Basketball
         {
             if (value < 0)
             {
-                throw new ArgumentException("Êîëè÷åñòâî ïåðåäà÷ äîëæíî áûòü íåîòðèöàòåëüíûì öåëûì ÷èñëîì");
+                throw new ArgumentException("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‡ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ñ†ÐµÐ»Ñ‹Ð¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼");
             }
             assists = value;
         }
     }
 
-    //Êîíñòðóêòîð êîïèðîâàíèÿ
+    //ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ
     public Basketball(Basketball other)
     {
         Points = other.Points + 4;
@@ -51,7 +50,7 @@ public class Basketball
         Assists = other.Assists - 3;
     }
 
-    //Êîíñòðóêòîð ñ ïàðàìåòðàìè
+    //ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ð¼Ð¸
     public Basketball(int pts, int reb, int ast)
     {
         Points = pts;
@@ -60,17 +59,16 @@ public class Basketball
     }
 
   
-    //Ìåòîä äëÿ îïðåäåëåíèÿ ìèíèìàëüíîãî ïîëÿ
+    //ÐœÐµÑ‚Ð¾Ð´ Ð´Ð»Ñ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ñ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð¿Ð¾Ð»Ñ
     public int Minstat()
     {
         return Math.Min(Points, Math.Min(Rebounds, Assists));
     }
 
-    //Ïåðåãðóçêà ìåòîäà
+    //ÐŸÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° Ð¼ÐµÑ‚Ð¾Ð´Ð°
     public override string ToString()
     {
-        return $"Î÷êè: {Points}, Ïîäáîðû: {Rebounds}, Ïåðåäà÷è: {Assists}";
+        return $"ÐžÑ‡ÐºÐ¸: {Points}, ÐŸÐ¾Ð´Ð±Ð¾Ñ€Ñ‹: {Rebounds}, ÐŸÐµÑ€ÐµÐ´Ð°Ñ‡Ð¸: {Assists}";
     }
 
 }
-
