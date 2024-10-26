@@ -10,13 +10,13 @@ public class Player : Basketball
         set {
             if (playerNumber < 0 ||  playerNumber > 99)
             {
-                throw new ArgumentException("Íîìåð èãðîêà íå ìîæåò áûòü îòðèöàòåëüíûì ÷èñëîì èëè áûòü áîëüøå 99");
+                throw new ArgumentException("Номер игрока не может быть отрицательным числом или быть больше 99");
             }
             playerNumber = value;
         }
     }
 
-    //Êîíñòðóêòîð ñ ïàðàìåòðàìè
+    //Конструктор с параметрами
     public Player(int number, int pts, int reb, int ast) : base(pts, reb, ast)
     {
         this.playerNumber = number;
@@ -24,10 +24,10 @@ public class Player : Basketball
 
   
 
-    //Ìåòîä äëÿ îòîáðàæåíèÿ ñòàòèñòèêè
+    //Метод для отображения статистики
    public void DisplayInfo()
     {
-        Console.WriteLine($"Íîìåð: {Number}, {base.ToString()}");
+        Console.WriteLine($"Номер: {Number}, {base.ToString()}");
     }
 
     public int CountTSPerc(int fga, int fgm)
