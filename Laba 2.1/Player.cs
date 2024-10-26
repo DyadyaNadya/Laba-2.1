@@ -10,25 +10,24 @@ public class Player : Basketball
         set {
             if (playerNumber < 0 ||  playerNumber > 99)
             {
-                throw new ArgumentException("Номер игрока не может быть отрицательным числом или быть больше 99");
+                throw new ArgumentException("ГЌГ®Г¬ГҐГ° ГЁГЈГ°Г®ГЄГ  Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј Г®ГІГ°ГЁГ¶Г ГІГҐГ«ГјГ­Г»Г¬ Г·ГЁГ±Г«Г®Г¬ ГЁГ«ГЁ ГЎГ»ГІГј ГЎГ®Г«ГјГёГҐ 99");
             }
             playerNumber = value;
         }
     }
 
-    //Конструктор с параметрами
+    //ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г± ГЇГ Г°Г Г¬ГҐГІГ°Г Г¬ГЁ
     public Player(int number, int pts, int reb, int ast) : base(pts, reb, ast)
     {
-        //this.playerName = name;
         this.playerNumber = number;
     }
 
   
 
-    //Метод для отображения статистики
+    //ГЊГҐГІГ®Г¤ Г¤Г«Гї Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї Г±ГІГ ГІГЁГ±ГІГЁГЄГЁ
    public void DisplayInfo()
     {
-        Console.WriteLine($"Номер: {Number}, {base.ToString()}");
+        Console.WriteLine($"ГЌГ®Г¬ГҐГ°: {Number}, {base.ToString()}");
     }
 
     public int CountTSPerc(int fga, int fgm)
